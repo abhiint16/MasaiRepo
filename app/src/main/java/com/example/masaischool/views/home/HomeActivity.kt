@@ -1,4 +1,4 @@
-package com.example.masaischool.views
+package com.example.masaischool.views.home
 
 import android.os.Bundle
 import android.widget.Toast
@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.masaischool.R
 import com.example.masaischool.databinding.ActivityHomeBinding
-import com.example.masaischool.views.viewmodel.HomeActivityViewModel
+import com.example.masaischool.views.home.viewmodel.HomeActivityViewModel
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 

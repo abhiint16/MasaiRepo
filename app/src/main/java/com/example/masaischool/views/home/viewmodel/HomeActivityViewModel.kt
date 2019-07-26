@@ -1,4 +1,4 @@
-package com.example.masaischool.views.viewmodel
+package com.example.masaischool.views.home.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
