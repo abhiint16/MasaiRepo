@@ -8,22 +8,26 @@
         {
           "option_id": "1000",
           "option_data": "None",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1001",
           "option_data": "4",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1002",
           "option_data": "5",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1003",
           "option_data": "7",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -35,22 +39,26 @@
         {
           "option_id": "1004",
           "option_data": "20",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1005",
           "option_data": "25",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1006",
           "option_data": "28",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1007",
           "option_data": "29",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         }
       ]
     },
@@ -62,22 +70,26 @@
         {
           "option_id": "1008",
           "option_data": "Bangladesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1009",
           "option_data": "Vatican",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1010",
           "option_data": "Israel",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1011",
           "option_data": "India",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -89,22 +101,26 @@
         {
           "option_id": "1012",
           "option_data": "India",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1013",
           "option_data": "China",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1014",
           "option_data": "USA",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1015",
           "option_data": "Russia",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -116,22 +132,26 @@
         {
           "option_id": "1016",
           "option_data": "France",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1017",
           "option_data": "USA",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1018",
           "option_data": "India",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1019",
           "option_data": "China",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -143,22 +163,26 @@
         {
           "option_id": "1020",
           "option_data": "J K Rowling",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1021",
           "option_data": "Rudyard Kipling",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1022",
           "option_data": "Ameesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1023",
           "option_data": "Abhishek Kumar",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -170,22 +194,26 @@
         {
           "option_id": "1024",
           "option_data": "J K Rowling",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1025",
           "option_data": "Rudyard Kipling",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1026",
           "option_data": "Ameesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1027",
           "option_data": "Chetan Bhagat",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -197,22 +225,26 @@
         {
           "option_id": "1028",
           "option_data": "J K Rowling",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1029",
           "option_data": "Rudyard Kipling",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1030",
           "option_data": "Ameesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1031",
           "option_data": "Chetan Bhagat",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -224,22 +256,26 @@
         {
           "option_id": "1032",
           "option_data": "J K Rowling",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1033",
           "option_data": "Rudyard Kipling",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1034",
           "option_data": "Ameesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1035",
           "option_data": "Chetan Bhagat",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     },
@@ -251,22 +287,26 @@
         {
           "option_id": "1036",
           "option_data": "J K Rowling",
-          "is_answer": true
+          "is_answer": true,
+          "is_selected": false
         },
         {
           "option_id": "1037",
           "option_data": "Rudyard Kipling",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1038",
           "option_data": "Ameesh",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         },
         {
           "option_id": "1039",
           "option_data": "Chetan Bhagat",
-          "is_answer": false
+          "is_answer": false,
+          "is_selected": false
         }
       ]
     }

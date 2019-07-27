@@ -16,8 +16,6 @@ class QuestionListDataModel() : Parcelable {
     @SerializedName("options_list")
     var optionList: List<OptionListModel> = ArrayList()
 
-    var stringMap: MutableMap<String, String> = HashMap()
-
     constructor(parcel: Parcel) : this() {
         questionId = parcel.readString()
         title = parcel.readString()

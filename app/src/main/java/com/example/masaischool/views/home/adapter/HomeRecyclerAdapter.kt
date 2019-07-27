@@ -39,7 +39,6 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         (holder as ViewHolder).binding.optionsLayout.removeAllViews()
         val singleSelectAnswersTypeOptions = SingleSelectType.Builder()
             .setContext(holder.binding.root.context)
-            .setPreviousSelectedId(questionListDataModelList.get(position).stringMap.values.toString())
             .setOptionList(questionListDataModelList.get(position))
             .setListener(onClickListener)
             .buildOption()
@@ -70,8 +69,8 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     internal var onClickListener: SingleTypeOptionSelectedListener = object : SingleTypeOptionSelectedListener {
-        override fun onSingleSelected(selectedItem: Map<String, String>) {
-            homeActivityViewModel.setOptionClickLiveData()
+        override fun onSingleSelected() {
+
         }
 
     }

@@ -17,7 +17,6 @@ class SingleSelectType : LinearLayout {
 
     lateinit var builder: Builder
     internal var lastCheckedPos: Int = 0
-    var selectedItem: MutableMap<String, String> = HashMap()
 
     constructor(context: Context) : super(context)
 
@@ -35,7 +34,6 @@ class SingleSelectType : LinearLayout {
         lateinit var itemData: QuestionListDataModel
         lateinit var singleTypeOptionSelectedListener: SingleTypeOptionSelectedListener
         lateinit var context: Context
-        internal var previousSelectedId = ""
 
         fun setOptionList(itemData: QuestionListDataModel): Builder {
             this.itemData = itemData
@@ -44,11 +42,6 @@ class SingleSelectType : LinearLayout {
 
         fun setListener(singleTypeOptionSelectedListener: SingleTypeOptionSelectedListener): Builder {
             this.singleTypeOptionSelectedListener = singleTypeOptionSelectedListener
-            return this
-        }
-
-        fun setPreviousSelectedId(previousSelectedId: String): Builder {
-            this.previousSelectedId = previousSelectedId
             return this
         }
 
@@ -76,13 +69,9 @@ class SingleSelectType : LinearLayout {
             radioButton.setTag(R.id.position, pos)
             radioButton.setOnClickListener(onClickListener)
 
-            if (builder.previousSelectedId.substring(1, builder.previousSelectedId.length - 1).equals(
-                    builder.itemData.optionList.get(pos).optionId
-                )
-            ) {
+            if (builder.itemData.optionList.get(pos).isSelected!!) {
                 radioButton.setChecked(true);
             }
-            /*if (builder.itemData.getStringMap().containsKey(builder.itemData.getId())){}*/
 
             val textView = view.findViewById<TextView>(R.id.item_single_choice_text)
             textView.text = builder.itemData.optionList[pos].optionData
@@ -96,30 +85,23 @@ class SingleSelectType : LinearLayout {
     internal var onClickListener: View.OnClickListener = OnClickListener { v ->
         val pos = v.getTag(R.id.position) as Int
 
-        if (lastCheckedPos != pos) {
-            val previousSelectedRadioButton =
-                this@SingleSelectType.getChildAt(lastCheckedPos).findViewById<RadioButton>(R.id.radio_btn)
-            previousSelectedRadioButton.isChecked = false
-            (v as RadioButton).isChecked = true
-        } else {
-            (v as RadioButton).isChecked = true
-        }
-        lastCheckedPos = pos
-
-        builder.itemData.optionList.get(pos).optionId?.let {
-            builder.itemData.questionId?.let { it1 ->
-                selectedItem.put(
-                    it1, it
-                )
+        for ((index, item) in builder.itemData.optionList.withIndex()) {
+            if (index == pos) {
+                builder.itemData.optionList.get(index).isSelected = true
+                (v as RadioButton).isChecked = true
+            } else {
+                val previousSelectedRadioButton =
+                    this@SingleSelectType.getChildAt(index).findViewById<RadioButton>(R.id.radio_btn)
+                builder.itemData.optionList.get(index).isSelected = false
+                previousSelectedRadioButton.isChecked = false
             }
         }
 
-        builder.itemData.stringMap.clear()
+        lastCheckedPos = pos
 
-        builder.itemData.stringMap
-            .put(builder.itemData.questionId!!, builder.itemData.optionList.get(pos).optionId!!)
 
-        builder.singleTypeOptionSelectedListener.onSingleSelected(selectedItem)
+
+        builder.singleTypeOptionSelectedListener.onSingleSelected()
 
         invalidate()
     }

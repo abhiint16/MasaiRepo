@@ -10,15 +10,23 @@ class OptionListModel() : Parcelable {
     var optionId: String? = null
     @SerializedName("option_data")
     var optionData: String? = null
+    @SerializedName("is_answer")
+    var isAnswer: Boolean? = false
+    @SerializedName("is_selected")
+    var isSelected: Boolean? = false
 
     constructor(parcel: Parcel) : this() {
         optionId = parcel.readString()
         optionData = parcel.readString()
+        isAnswer = parcel.readByte() != 0.toByte()
+        isSelected = parcel.readByte() != 0.toByte()
     }
 
     override fun writeToParcel(parcel: Parcel?, p1: Int) {
         parcel?.writeString(optionData)
         parcel?.writeString(optionId)
+        parcel?.writeByte(if (isAnswer!!) 1 else 0)
+        parcel?.writeByte(if (isSelected!!) 1 else 0)
     }
 
     override fun describeContents(): Int {
