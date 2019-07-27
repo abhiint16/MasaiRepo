@@ -1,0 +1,234 @@
+{
+  "question_list": [
+    {
+      "question_id": "100",
+      "title": "Question No: 01",
+      "question_data": "How many rings are on the Olympic flag?",
+      "options_list": [
+        {
+          "option_id": "1000",
+          "option_data": "None"
+        },
+        {
+          "option_id": "1001",
+          "option_data": "4"
+        },
+        {
+          "option_id": "1002",
+          "option_data": "5"
+        },
+        {
+          "option_id": "1003",
+          "option_data": "7"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 02",
+      "question_data": "How many states in India?",
+      "options_list": [
+        {
+          "option_id": "1004",
+          "option_data": "20"
+        },
+        {
+          "option_id": "1005",
+          "option_data": "25"
+        },
+        {
+          "option_id": "1006",
+          "option_data": "28"
+        },
+        {
+          "option_id": "1007",
+          "option_data": "29"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 03",
+      "question_data": "Which is the smallest country in the world?",
+      "options_list": [
+        {
+          "option_id": "1008",
+          "option_data": "Bangladesh"
+        },
+        {
+          "option_id": "1009",
+          "option_data": "Vatican"
+        },
+        {
+          "option_id": "1010",
+          "option_data": "Israel"
+        },
+        {
+          "option_id": "1011",
+          "option_data": "India"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 04",
+      "question_data": "Which is the largest country in the world?",
+      "options_list": [
+        {
+          "option_id": "1012",
+          "option_data": "India"
+        },
+        {
+          "option_id": "1013",
+          "option_data": "China"
+        },
+        {
+          "option_id": "1014",
+          "option_data": "USA"
+        },
+        {
+          "option_id": "1015",
+          "option_data": "Russia"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 05",
+      "question_data": "Which country of the following is not part of UN permanent security council?",
+      "options_list": [
+        {
+          "option_id": "1016",
+          "option_data": "France"
+        },
+        {
+          "option_id": "1017",
+          "option_data": "USA"
+        },
+        {
+          "option_id": "1018",
+          "option_data": "India"
+        },
+        {
+          "option_id": "1019",
+          "option_data": "China"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 06",
+      "question_data": "Who is the Author of Jungle Book?",
+      "options_list": [
+        {
+          "option_id": "1020",
+          "option_data": "J K Rowling"
+        },
+        {
+          "option_id": "1021",
+          "option_data": "Rudyard Kipling"
+        },
+        {
+          "option_id": "1022",
+          "option_data": "Ameesh"
+        },
+        {
+          "option_id": "1023",
+          "option_data": "Abhishek Kumar"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 07",
+      "question_data": "Who is the Author of Harry Potter?",
+      "options_list": [
+        {
+          "option_id": "1024",
+          "option_data": "J K Rowling"
+        },
+        {
+          "option_id": "1025",
+          "option_data": "Rudyard Kipling"
+        },
+        {
+          "option_id": "1026",
+          "option_data": "Ameesh"
+        },
+        {
+          "option_id": "1027",
+          "option_data": "Chetan Bhagat"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 08",
+      "question_data": "Who is the Author of Harry Potter?",
+      "options_list": [
+        {
+          "option_id": "1028",
+          "option_data": "J K Rowling"
+        },
+        {
+          "option_id": "1029",
+          "option_data": "Rudyard Kipling"
+        },
+        {
+          "option_id": "1030",
+          "option_data": "Ameesh"
+        },
+        {
+          "option_id": "1031",
+          "option_data": "Chetan Bhagat"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 09",
+      "question_data": "Who is the Author of Harry Potter?",
+      "options_list": [
+        {
+          "option_id": "1032",
+          "option_data": "J K Rowling"
+        },
+        {
+          "option_id": "1033",
+          "option_data": "Rudyard Kipling"
+        },
+        {
+          "option_id": "1034",
+          "option_data": "Ameesh"
+        },
+        {
+          "option_id": "1035",
+          "option_data": "Chetan Bhagat"
+        }
+      ]
+    },
+    {
+      "question_id": "PHOTO",
+      "title": "Question No: 10",
+      "question_data": "Who is the Author of Harry Potter?",
+      "options_list": [
+        {
+          "option_id": "1036",
+          "option_data": "J K Rowling"
+        },
+        {
+          "option_id": "1037",
+          "option_data": "Rudyard Kipling"
+        },
+        {
+          "option_id": "1038",
+          "option_data": "Ameesh"
+        },
+        {
+          "option_id": "1039",
+          "option_data": "Chetan Bhagat"
+        }
+      ]
+    }
+  ]
+}

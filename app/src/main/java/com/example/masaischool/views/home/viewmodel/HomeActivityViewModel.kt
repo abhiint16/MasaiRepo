@@ -14,8 +14,8 @@ class HomeActivityViewModel : ViewModel {
         this.dataManager = dataManager
     }
 
-    fun testFun() {
-        mutableLiveData.value = true
+    fun getQuestionData() {
+        dataManager.getQuestionData()
     }
 
     fun observeForLiveData(): LiveData<Boolean> {
