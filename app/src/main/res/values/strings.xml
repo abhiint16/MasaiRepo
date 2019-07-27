@@ -2,4 +2,6 @@
     <string name="app_name">MasaiSchool</string>
 
     <string name="username_error">UserName can\'t be empty</string>
+
+    <item name="position" type="id" />
 </resources>

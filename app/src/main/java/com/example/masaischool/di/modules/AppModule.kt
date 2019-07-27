@@ -1,5 +1,6 @@
 package com.example.masaischool.di.modules
 
+import android.content.Context
 import com.example.masaischool.AppConstants
 import com.example.masaischool.datamanager.DataManager
 import com.example.masaischool.datamanager.DataManagerImpl
@@ -8,6 +9,10 @@ import com.example.masaischool.datamanager.apihelper.ApiHelperImpl
 import com.example.masaischool.datamanager.apihelper.ApiService
 import com.example.masaischool.datamanager.dbhelper.DBHelper
 import com.example.masaischool.datamanager.dbhelper.DBHelperImpl
+import com.example.masaischool.datamanager.localjson.JsonService
+import com.example.masaischool.datamanager.localjson.JsonToString
+import com.example.masaischool.datamanager.localjson.LocalJsonHelper
+import com.example.masaischool.datamanager.localjson.LocalJsonHelperImpl
 import com.example.masaischool.datamanager.prefhelper.PreferenceHelper
 import com.example.masaischool.datamanager.prefhelper.PreferenceHelperImpl
 import com.example.masaischool.di.qualifier.PreferenceName
@@ -36,6 +41,25 @@ class AppModule {
     fun providesDBHelper(dbHelper: DBHelperImpl):
             DBHelper {
         return dbHelper
+    }
+
+    @Provides
+    @Singleton
+    fun providesLocalJsonHelper(localJsonHelper: LocalJsonHelperImpl):
+            LocalJsonHelper {
+        return localJsonHelper
+    }
+
+    @Provides
+    @Singleton
+    fun providesJsonService(jsonToString: JsonToString): JsonService {
+        return JsonService(jsonToString)
+    }
+
+    @Provides
+    @Singleton
+    fun providesJsonToString(context: Context): JsonToString {
+        return JsonToString(context)
     }
 
     @Provides
