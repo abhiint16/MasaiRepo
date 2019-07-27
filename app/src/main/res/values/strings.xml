@@ -2,6 +2,7 @@
     <string name="app_name">MasaiSchool</string>
 
     <string name="username_error">UserName can\'t be empty</string>
+    <string name="see_leaderboard">See LeaderBoard</string>
 
     <item name="position" type="id" />
 </resources>

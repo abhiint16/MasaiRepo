@@ -14,7 +14,8 @@ class UserDetailActivityViewModel : ViewModel {
         this.dataManager = dataManager
     }
 
-    fun testFun() {
+    fun saveNameInPref(name: String) {
+        dataManager.setName(name)
         mutableLiveData.value = true
     }
 

@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.masaischool.R
@@ -21,7 +22,7 @@ class UserDetailActivity : AppCompatActivity(), View.OnClickListener {
     @Inject
     lateinit var factory: ViewModelProvider.Factory
 
-    lateinit var homeActivityViewModel: UserDetailActivityViewModel
+    lateinit var userActivityViewModel: UserDetailActivityViewModel
 
     lateinit var binding: ActivityUserdetailBinding
 
@@ -31,9 +32,7 @@ class UserDetailActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_userdetail)
 
-        homeActivityViewModel = ViewModelProviders.of(this, factory).get(UserDetailActivityViewModel::class.java)
-
-        homeActivityViewModel.testFun()
+        userActivityViewModel = ViewModelProviders.of(this, factory).get(UserDetailActivityViewModel::class.java)
 
         initObserver()
         setUp()
@@ -45,7 +44,10 @@ class UserDetailActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initObserver() {
-
+        userActivityViewModel.observeForLiveData().observe(this, Observer {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     var usernameWatcher = object : TextWatcher {
@@ -71,8 +73,7 @@ class UserDetailActivity : AppCompatActivity(), View.OnClickListener {
         if (username.isEmpty()) {
             binding.usernameLayout.error = getString(R.string.username_error)
         } else {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            userActivityViewModel.saveNameInPref(username)
         }
     }
 }

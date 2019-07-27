@@ -50,9 +50,11 @@ class JsonService(private val jsonToString: JsonToString) {
 
                     val optionId = optionItem.getString("option_id")
                     val optionData = optionItem.getString("option_data")
+                    val isAnswer = optionItem.getBoolean("is_answer")
 
                     optionListModel.optionId = optionId
                     optionListModel.optionData = optionData
+                    optionListModel.isAnswer = isAnswer
                     optionList.add(optionListModel)
                 }
 

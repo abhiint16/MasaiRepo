@@ -4,6 +4,8 @@
 
         <variable name="viewmodel"
                   type="com.example.masaischool.views.home.viewmodel.HomeActivityViewModel"/>
+        <variable name="data"
+                  type="com.example.masaischool.views.home.model.OptionListModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

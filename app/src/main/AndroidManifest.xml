@@ -8,12 +8,18 @@
                  android:roundIcon="@mipmap/ic_launcher_round"
                  android:supportsRtl="true"
                  android:theme="@style/AppTheme">
-        <activity android:name="com.example.masaischool.views.home.HomeActivity"
+        <activity android:name=".views.userdetail.UserDetailActivity"
                   android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".views.home.HomeActivity"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name=".views.score.ScoreActivity"
+                  android:screenOrientation="portrait"></activity>
+        <activity android:name=".views.leaderboard.LeaderBoardActivity"
+                  android:screenOrientation="portrait"></activity>
     </application>
 </manifest>

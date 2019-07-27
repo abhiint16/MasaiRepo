@@ -5,7 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.masaischool.datamanager.DataManager
+import com.example.masaischool.views.home.model.OptionListModel
 import com.example.masaischool.views.home.model.QuestionListModel
+import io.reactivex.Completable
+import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
@@ -13,7 +16,9 @@ import io.reactivex.schedulers.Schedulers
 class HomeActivityViewModel : ViewModel {
     var dataManager: DataManager
 
-    internal var questionLiveData = MutableLiveData<QuestionListModel>()
+    var saveDataDBLiveData = MutableLiveData<Long>()
+
+    var questionLiveData = MutableLiveData<QuestionListModel>()
 
     var optionClickCheckLiveData = MutableLiveData<Int>()
 
@@ -30,6 +35,19 @@ class HomeActivityViewModel : ViewModel {
             }
     }
 
+    fun getUserName(): String {
+        return dataManager.getName()
+    }
+
+    fun submitTest(questionListModel: QuestionListModel) {
+        dataManager.saveDataToDB(questionListModel, dataManager.getName())
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(Consumer {
+                saveDataDBLiveData.value = it
+            })
+    }
+
     fun setOptionClickLiveData() {
         optionClickCheckLiveData.value = optionClickCheckLiveData.value?.plus(1)
     }
@@ -40,5 +58,9 @@ class HomeActivityViewModel : ViewModel {
 
     fun observeForOptionClickLiveData(): LiveData<Int> {
         return optionClickCheckLiveData
+    }
+
+    fun observeForSaveSuccessLiveData(): LiveData<Long> {
+        return saveDataDBLiveData
     }
 }

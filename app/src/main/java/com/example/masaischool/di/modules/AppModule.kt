@@ -1,6 +1,7 @@
 package com.example.masaischool.di.modules
 
 import android.content.Context
+import androidx.room.Room
 import com.example.masaischool.AppConstants
 import com.example.masaischool.datamanager.DataManager
 import com.example.masaischool.datamanager.DataManagerImpl
@@ -9,6 +10,8 @@ import com.example.masaischool.datamanager.apihelper.ApiHelperImpl
 import com.example.masaischool.datamanager.apihelper.ApiService
 import com.example.masaischool.datamanager.dbhelper.DBHelper
 import com.example.masaischool.datamanager.dbhelper.DBHelperImpl
+import com.example.masaischool.datamanager.dbhelper.DatabaseConstants
+import com.example.masaischool.datamanager.dbhelper.database.MasaiDatabase
 import com.example.masaischool.datamanager.localjson.JsonService
 import com.example.masaischool.datamanager.localjson.JsonToString
 import com.example.masaischool.datamanager.localjson.LocalJsonHelper
@@ -77,5 +80,22 @@ class AppModule {
     @PreferenceName
     fun providesSharedPrefName(): String {
         return AppConstants.SHARED_PREFERENCE_NAME;
+    }
+
+    @Provides
+    @Singleton
+    internal fun providesDataBase(context: Context, databaseName: String): MasaiDatabase {
+        return Room.databaseBuilder(context, MasaiDatabase::class.java, databaseName).fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Provides
+    internal fun providesDatabaseVersion(): Int? {
+        return DatabaseConstants.GeneralInfo.DB_VERSION
+    }
+
+    @Provides
+    internal fun providesDatabaseName(): String {
+        return DatabaseConstants.GeneralInfo.DB_NAME
     }
 }
