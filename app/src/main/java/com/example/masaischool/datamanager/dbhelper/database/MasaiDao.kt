@@ -1,9 +1,7 @@
 package com.example.masaischool.datamanager.dbhelper.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteQuery
 import com.example.masaischool.datamanager.dbhelper.DatabaseConstants
 import io.reactivex.Single
 
@@ -25,8 +23,18 @@ abstract class MasaiDao {
     @Insert
     abstract fun insertRow(mappedData: MappedData): Long
 
-    @Query(" SELECT * FROM " + DatabaseConstants.DatabaseTables.TABLE_NAME)
-    abstract fun getAll(): Single<List<MappedData>>
+    /*SELECT name, rollno, score
+    , rank() over (order by score, dob desc) as rnk
+    FROM score
+    WHERE examid = '1'
+    ORDER BY score DESC, dob ASC*/
+
+    /*@Query(" SELECT * FROM " + DatabaseConstants.DatabaseTables.TABLE_NAME + " ORDER BY " +
+            DatabaseConstants.ColumnName.MARKS + " DESC ")
+    abstract fun getAll(): Single<List<MappedData>>*/
+
+    @RawQuery
+    abstract fun getAll(query : SupportSQLiteQuery): Single<List<MappedData>>
 
     @Query(
         " SELECT * FROM " + DatabaseConstants.DatabaseTables.TABLE_NAME + " ORDER BY " +

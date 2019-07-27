@@ -1,5 +1,6 @@
 package com.example.masaischool.datamanager.dbhelper
 
+import androidx.sqlite.db.SimpleSQLiteQuery
 import com.example.masaischool.datamanager.dbhelper.database.MappedData
 import com.example.masaischool.datamanager.dbhelper.database.MasaiDatabase
 import com.example.masaischool.views.home.model.QuestionListModel
@@ -33,7 +34,17 @@ class DBHelperImpl : DBHelper {
     }
 
     override fun getDataFromDB(): Single<List<MappedData>> {
-        return masaiDatabase.masaiDao.getAll()
+        var query: String =
+            " SELECT * FROM " + DatabaseConstants.DatabaseTables.TABLE_NAME + " ORDER BY " +
+                    DatabaseConstants.ColumnName.MARKS + " DESC "
+
+        /*" SELECT " + DatabaseConstants.ColumnName.ID + ", " + DatabaseConstants.ColumnName.NAME + ", " + DatabaseConstants.ColumnName.MARKS +
+                ", rank ()  over( ORDER BY " + DatabaseConstants.ColumnName.MARKS + " ) userrank FROM " +
+                DatabaseConstants.DatabaseTables.TABLE_NAME*/
+
+
+
+        return masaiDatabase.masaiDao.getAll(SimpleSQLiteQuery(query))
     }
 
     override fun getLatestDataFromDB(): Single<MappedData> {

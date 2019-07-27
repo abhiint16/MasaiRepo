@@ -87,6 +87,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         homeActivityViewModel.observeForSaveSuccessLiveData().observe(this, Observer { noOfOptionSelected ->
             val intent = Intent(this, ScoreActivity::class.java)
             startActivity(intent)
+            finish()
         })
     }
 

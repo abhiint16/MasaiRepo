@@ -6,7 +6,7 @@ import androidx.room.Transaction
 
 import javax.inject.Singleton
 
-@Database(entities = [MappedData::class], version = 2, exportSchema = false)
+@Database(entities = [MappedData::class], version = 1, exportSchema = false)
 @Singleton
 abstract class MasaiDatabase : RoomDatabase() {
 

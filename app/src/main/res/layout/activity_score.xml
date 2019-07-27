@@ -16,6 +16,7 @@
                 android:id="@+id/score"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp"
+                android:gravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

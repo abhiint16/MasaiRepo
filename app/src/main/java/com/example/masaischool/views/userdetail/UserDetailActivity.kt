@@ -47,6 +47,7 @@ class UserDetailActivity : AppCompatActivity(), View.OnClickListener {
         userActivityViewModel.observeForLiveData().observe(this, Observer {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         })
     }
 

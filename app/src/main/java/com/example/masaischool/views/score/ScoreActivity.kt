@@ -58,12 +58,13 @@ class ScoreActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun initObserver() {
         scoreActivityViewModel.observeForLiveData().observe(this, Observer {
-            binding.score.setText("Hey! " + it.name + " Your Score is " + it.marks.toString())
+            binding.score.setText("Hey! " + "' " + it.name + " '" + " Your Score is " + it.marks.toString())
         })
     }
 
     override fun onClick(p0: View?) {
         val intent = Intent(this, LeaderBoardActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }

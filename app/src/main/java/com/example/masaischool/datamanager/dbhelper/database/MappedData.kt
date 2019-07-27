@@ -26,4 +26,9 @@ class MappedData {
     @Expose
     @SerializedName("marks")
     var marks: Int? = null
+
+    @ColumnInfo(name = DatabaseConstants.ColumnName.RANK)
+    @Expose
+    @SerializedName("rank")
+    var rank: Int? = null
 }
