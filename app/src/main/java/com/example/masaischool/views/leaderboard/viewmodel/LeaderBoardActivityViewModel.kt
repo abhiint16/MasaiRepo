@@ -30,7 +30,7 @@ class LeaderBoardActivityViewModel : ViewModel {
     }
 
     fun createRank(mappedData: List<MappedData>): List<MappedData> {
-        var mappedData: List<MappedData> = mappedData
+        val mappedData: List<MappedData> = mappedData
         for ((index, item) in mappedData.withIndex()) {
             if (index == 0) {
                 mappedData.get(index).rank = index + 1
