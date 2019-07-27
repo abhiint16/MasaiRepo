@@ -3,6 +3,7 @@ package com.example.masaischool.views.home.model
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import java.util.HashMap
 
 class QuestionListDataModel() : Parcelable {
 
@@ -14,6 +15,8 @@ class QuestionListDataModel() : Parcelable {
     var questionData: String? = null
     @SerializedName("options_list")
     var optionList: List<OptionListModel> = ArrayList()
+
+    var stringMap: MutableMap<String, String> = HashMap()
 
     constructor(parcel: Parcel) : this() {
         questionId = parcel.readString()

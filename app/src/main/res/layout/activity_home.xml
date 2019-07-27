@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
 
+        <variable name="viewmodel"
+                  type="com.example.masaischool.views.home.viewmodel.HomeActivityViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
+                android:enabled="false"
                 android:text="Submit Test"
                 android:textColor="@android:color/white"
                 app:layout_constraintEnd_toEndOf="parent"

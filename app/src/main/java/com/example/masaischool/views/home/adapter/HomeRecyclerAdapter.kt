@@ -10,13 +10,19 @@ import com.example.masaischool.databinding.ItemQuestionBinding
 import com.example.masaischool.views.home.SingleSelectType
 import com.example.masaischool.views.home.SingleTypeOptionSelectedListener
 import com.example.masaischool.views.home.model.QuestionListDataModel
+import com.example.masaischool.views.home.viewmodel.HomeActivityViewModel
 
 class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var questionListDataModelList = ArrayList<QuestionListDataModel>()
+    private lateinit var homeActivityViewModel: HomeActivityViewModel
 
     fun addData(questionListDataModelList: ArrayList<QuestionListDataModel>) {
         this.questionListDataModelList = questionListDataModelList
         notifyDataSetChanged()
+    }
+
+    fun setViewModel(homeActivityViewModel: HomeActivityViewModel) {
+        this.homeActivityViewModel = homeActivityViewModel
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -33,7 +39,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         (holder as ViewHolder).binding.optionsLayout.removeAllViews()
         val singleSelectAnswersTypeOptions = SingleSelectType.Builder()
             .setContext(holder.binding.root.context)
-            .setPreviousSelectedId("")
+            .setPreviousSelectedId(questionListDataModelList.get(position).stringMap.values.toString())
             .setOptionList(questionListDataModelList.get(position))
             .setListener(onClickListener)
             .buildOption()
@@ -45,7 +51,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        if (questionListDataModelList == null || questionListDataModelList.size == 0)
+        if (questionListDataModelList.size == 0)
             return 0
         else
             return questionListDataModelList.size
@@ -65,7 +71,7 @@ class HomeRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     internal var onClickListener: SingleTypeOptionSelectedListener = object : SingleTypeOptionSelectedListener {
         override fun onSingleSelected(selectedItem: Map<String, String>) {
-
+            homeActivityViewModel.setOptionClickLiveData()
         }
 
     }

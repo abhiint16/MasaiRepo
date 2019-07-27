@@ -15,6 +15,8 @@ class HomeActivityViewModel : ViewModel {
 
     internal var questionLiveData = MutableLiveData<QuestionListModel>()
 
+    var optionClickCheckLiveData = MutableLiveData<Int>()
+
     constructor(dataManager: DataManager) : super() {
         this.dataManager = dataManager
     }
@@ -28,7 +30,15 @@ class HomeActivityViewModel : ViewModel {
             }
     }
 
+    fun setOptionClickLiveData() {
+        optionClickCheckLiveData.value = optionClickCheckLiveData.value?.plus(1)
+    }
+
     fun observeForQuestionLiveData(): LiveData<QuestionListModel> {
         return questionLiveData
+    }
+
+    fun observeForOptionClickLiveData(): LiveData<Int> {
+        return optionClickCheckLiveData
     }
 }

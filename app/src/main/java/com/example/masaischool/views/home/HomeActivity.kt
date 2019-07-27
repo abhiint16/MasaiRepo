@@ -47,10 +47,12 @@ class HomeActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         binding.recyclerview.setLayoutManager(linearLayoutManager)
         binding.recyclerview.setAdapter(mainRecyclerAdapter)
+        mainRecyclerAdapter.setViewModel(homeActivityViewModel)
     }
 
     private fun initDataBinding() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+        binding.viewmodel = homeActivityViewModel
     }
 
     private fun initViewModel() {
@@ -64,6 +66,10 @@ class HomeActivity : AppCompatActivity() {
     private fun initObserver() {
         homeActivityViewModel.observeForQuestionLiveData().observe(this, Observer { questionData ->
             mainRecyclerAdapter.addData(questionData.questionList as ArrayList<QuestionListDataModel>)
+        })
+
+        homeActivityViewModel.observeForOptionClickLiveData().observe(this, Observer { noOfOptionSelected ->
+
         })
     }
 }
