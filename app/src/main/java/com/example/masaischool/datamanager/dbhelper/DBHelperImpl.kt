@@ -38,12 +38,6 @@ class DBHelperImpl : DBHelper {
             " SELECT * FROM " + DatabaseConstants.DatabaseTables.TABLE_NAME + " ORDER BY " +
                     DatabaseConstants.ColumnName.MARKS + " DESC "
 
-        /*" SELECT " + DatabaseConstants.ColumnName.ID + ", " + DatabaseConstants.ColumnName.NAME + ", " + DatabaseConstants.ColumnName.MARKS +
-                ", rank ()  over( ORDER BY " + DatabaseConstants.ColumnName.MARKS + " ) userrank FROM " +
-                DatabaseConstants.DatabaseTables.TABLE_NAME*/
-
-
-
         return masaiDatabase.masaiDao.getAll(SimpleSQLiteQuery(query))
     }
 

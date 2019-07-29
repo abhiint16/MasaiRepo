@@ -32,7 +32,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "101",
       "title": "Question No: 02",
       "question_data": "How many states in India?",
       "options_list": [
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "102",
       "title": "Question No: 03",
       "question_data": "Which is the smallest country in the world?",
       "options_list": [
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "103",
       "title": "Question No: 04",
       "question_data": "Which is the largest country in the world?",
       "options_list": [
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "104",
       "title": "Question No: 05",
       "question_data": "Which country of the following is not part of UN permanent security council?",
       "options_list": [
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "105",
       "title": "Question No: 06",
       "question_data": "Who is the Author of Jungle Book?",
       "options_list": [
@@ -187,7 +187,7 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "106",
       "title": "Question No: 07",
       "question_data": "Who is the Author of Harry Potter?",
       "options_list": [
@@ -218,69 +218,69 @@
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "107",
       "title": "Question No: 08",
-      "question_data": "Who is the Author of Harry Potter?",
+      "question_data": "Following is not part of 7 sisters?",
       "options_list": [
         {
           "option_id": "1028",
-          "option_data": "J K Rowling",
-          "is_answer": true,
+          "option_data": "Tripura",
+          "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1029",
-          "option_data": "Rudyard Kipling",
+          "option_data": "Assam",
           "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1030",
-          "option_data": "Ameesh",
+          "option_data": "Nagaland",
           "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1031",
-          "option_data": "Chetan Bhagat",
-          "is_answer": false,
+          "option_data": "West Bengal",
+          "is_answer": true,
           "is_selected": false
         }
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "108",
       "title": "Question No: 09",
-      "question_data": "Who is the Author of Harry Potter?",
+      "question_data": "Which of the following country does't share boundary with India?",
       "options_list": [
         {
           "option_id": "1032",
-          "option_data": "J K Rowling",
-          "is_answer": true,
+          "option_data": "China",
+          "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1033",
-          "option_data": "Rudyard Kipling",
+          "option_data": "Afghanistan",
           "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1034",
-          "option_data": "Ameesh",
+          "option_data": "Myanmar",
           "is_answer": false,
           "is_selected": false
         },
         {
           "option_id": "1035",
-          "option_data": "Chetan Bhagat",
-          "is_answer": false,
+          "option_data": "Tajakistan",
+          "is_answer": true,
           "is_selected": false
         }
       ]
     },
     {
-      "question_id": "PHOTO",
+      "question_id": "109",
       "title": "Question No: 10",
       "question_data": "Who is the Author of Harry Potter?",
       "options_list": [
